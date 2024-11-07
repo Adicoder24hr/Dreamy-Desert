@@ -10,9 +10,10 @@ import { CartContext } from "./utils/ContextReducer";
 
 export default function Home() {
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isCartNotEmpty, setIsCartNotEmpty] = useState(false);
   const [showConfirmPopup, setConfirmPopup] = useState(false);
-  const {state, dispatch} = useContext(CartContext);
+  const {state} = useContext(CartContext);
 
   const HandleAddToCart = () =>{
     setIsCartNotEmpty(true);

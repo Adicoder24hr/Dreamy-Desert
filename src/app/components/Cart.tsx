@@ -6,7 +6,7 @@ const Cart = ({onConfirmOrder, setIsCartNotEmpty}) => {
     const {state, dispatch} = useContext(CartContext);
 
     const cartHeading = `Your Cart (${state.length})`;
-    let totalPrice = state.reduce((total, food) => total + (food.qty * food.unitePrice), 0);
+    const totalPrice = state.reduce((total, food) => total + (food.qty * food.unitePrice), 0);
 
   return (
     <div className="lg:w-full bg-white px-6 flex flex-col gap-6 rounded-lg py-8">

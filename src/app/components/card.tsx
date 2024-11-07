@@ -23,7 +23,7 @@ const Card = ({foodData, onAddToCart}: CardProps) => {
     const [click, setClick] = useState(false);
     const imageRef = useRef<HTMLImageElement | null>(null);
     const {state, dispatch} = useContext(CartContext);
-    const [qty, setQty] = useState(1);
+    const [qty] = useState(1);
 
     const handleAddToCart = async () =>{
       const updateItem = await state.find((item)=>{

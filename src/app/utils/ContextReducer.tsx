@@ -15,7 +15,7 @@ const reducer = (state, action) => {
             }
         ];
         case "UPDATE":
-            let arr = [...state];
+            const arr = [...state];
             arr.find((food, index)=>{
                 if(food.tempId === action.tempId){
                     arr[index] = {
@@ -28,7 +28,7 @@ const reducer = (state, action) => {
             return arr;
 
         case "REMOVE":
-            let newArr = [...state];
+            const newArr = [...state];
             newArr.splice(action.index, 1);
             return newArr;
 

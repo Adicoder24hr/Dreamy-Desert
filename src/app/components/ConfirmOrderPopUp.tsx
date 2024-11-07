@@ -14,11 +14,11 @@ const ConfirmOrderPopup = ({ onClose, setIsCartNotEmpty }) => {
         })
     }
 
-    let totalPrice = state.reduce((total, food) => total + (food.qty * food.unitePrice), 0);
+    const totalPrice = state.reduce((total, food) => total + (food.qty * food.unitePrice), 0);
 
   return (
     <div className="fixed inset-0 flex items-end lg:items-center md:items-center justify-center bg-black bg-opacity-50 z-50">
-      <div className="bg-white p-8 rounded-t-2xl shadow-lg max-w-md lg:max-w-md md:max-w-2xl w-full flex flex-col gap-4">
+      <div className="bg-white p-8 rounded-t-2xl md:rounded-2xl shadow-lg max-w-md lg:max-w-md md:max-w-2xl w-full flex flex-col gap-4">
       <svg 
       className="w-8 h-8 lg:w-8 lg:h-8"
       width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
